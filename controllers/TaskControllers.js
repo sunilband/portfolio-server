@@ -1,43 +1,93 @@
 const Model = require("../models/Model");
 
 module.exports.getData = async (req, res) => {
-  const data = await Model.find();
-  res.json(data);
+  console.log("get / request was made")
+  try{
+    const data = await Model.find()
+    res.json(data);
+  }
+  catch(err){
+    res.send(err)
+    console.log(err)
+  } 
 };
 
 module.exports.getAbout = async (req, res) => {
-  const aboutData = await Model.find({section:{$eq:"about"}});
-  res.json(aboutData);
+  console.log("get /about request was made")
+  try{
+    const aboutData = await Model.find({section:{$eq:"about"}});
+    res.json(aboutData);
+  }
+  catch(err){
+    res.send(err)
+    console.log(err)
+  } 
+  
 };
 
 module.exports.getHero = async (req, res) => {
-  const heroData = await Model.find({section:{$eq:"hero"}});
-  res.json(heroData);
+  console.log("get /hero request was made")
+  try{
+    const heroData = await Model.find({section:{$eq:"hero"}});
+    res.json(heroData);
+  }
+  catch(err){
+    res.send(err)
+    console.log(err)
+  } 
+  
 };
 
 module.exports.getCert = async (req, res) => {
-  const certData = await Model.find({section:{$eq:"certifications"}});
-  res.json(certData);
-};
-
-module.exports.getCert = async (req, res) => {
-  const certData = await Model.find({section:{$eq:"certifications"}});
-  res.json(certData);
+  console.log("get /certifications request was made")
+  try{
+    const certData = await Model.find({section:{$eq:"certifications"}});
+    res.json(certData);
+  }
+  catch(err){
+    res.send(err)
+    console.log(err)
+  } 
+  
 };
 
 module.exports.getSkills = async (req, res) => {
-  const skillsData = await Model.find({section:{$eq:"skills"}});
-  res.json(skillsData);
+  console.log("get /skills request was made")
+  try{
+    const skillsData = await Model.find({section:{$eq:"skills"}});
+    res.json(skillsData);
+  }
+  catch(err){
+    res.send(err)
+    console.log(err)
+  } 
+ 
 };
 
 module.exports.getProjects = async (req, res) => {
-  const projectsData = await Model.find({section:{$eq:"projects"}});
-  res.json(projectsData);
+  console.log("get /projects request was made")
+  try{
+    const projectsData = await Model.find({section:{$eq:"projects"}});
+    res.json(projectsData);
+  }
+  catch(err){
+    res.send(err)
+    console.log(err)
+  } 
+  
 };
 
 module.exports.getHeader = async (req, res) => {
-  const headerData = await Model.find({section:{$eq:"header"}});
-  res.json(headerData);
+  console.log("get /header request was made")
+  try{
+    const headerData = await Model.find({section:{$eq:"header"}});
+    res.json(headerData);
+  }
+  catch(err){
+    res.send(err)
+    console.log(err)
+  } 
+  
 };
 
 
