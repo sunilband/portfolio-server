@@ -1,9 +1,11 @@
 const express=require("express")
 require('dotenv').config()
-const server=express()
 const mongoose=require("mongoose")
 const cors=require("cors")
+
+const server=express()
 const port=process.env.PORT || 8000
+// import routes
 const routes=require("./routes/TaskRoute")
 // middlewares
 server.use(express.json())
@@ -18,6 +20,5 @@ mongoose.connect(process.env.MONGO_URI)
 
 
 server.listen(port,()=>{
-    console.log(process.env.port)
     console.log(`server is running at ${port}`)
 })
